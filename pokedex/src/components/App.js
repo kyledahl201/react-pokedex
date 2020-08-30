@@ -6,6 +6,16 @@ import './App.css';
 class App extends Component {
   constructor () {
       super ();
+
+      this.state = {
+        searchField: '',
+        pokemons: [],
+        selectedPokemon: null,
+      }
+  }
+
+  componentDidMount () {
+      this.setState ({ pokemons: pokemonData });
   }
 
     render () {
