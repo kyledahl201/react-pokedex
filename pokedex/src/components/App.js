@@ -1,24 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import { pokemonData } from './data/pokemonData'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          fuck off this app is building
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello world
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  constructor () {
+      super ();
+  }
+
+    render () {
+      return (
+        <div className="App">
+          <h1>Pokedex</h1>
+        </div>
+      );
+    }
+} 
+
 
 export default App;
