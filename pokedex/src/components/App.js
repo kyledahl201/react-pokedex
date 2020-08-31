@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { pokemonData } from './data/pokemonData'
 import './App.css';
+import { Pokedex } from './pokedex/Pokedex';
 
 class App extends Component {
   constructor () {
@@ -22,6 +23,7 @@ class App extends Component {
       return (
         <div className="App">
           <h1>Pokedex</h1>
+          <Pokedex />
         </div>
       );
     }
