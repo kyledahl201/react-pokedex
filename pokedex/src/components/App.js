@@ -24,12 +24,18 @@ class App extends Component {
   }
 
     render () {
+      const { pokemons, searchField } = this.state;
+      let searchedPokemons = pokemons.filter(pokemon => {
+          return pokemon.name
+            ? pokemon.name.toLowerCase().includes(searchField.toLowerCase())
+            : false
+      })
       return (
         <div className="App">
           <h1>Pokedex</h1>
           <Pokedex 
           handlePokeSearch={this.handlePokeSearch}
-          pokemons={this.state.pokemons} />
+          pokemons={searchedPokemons} />
         </div>
       );
     }
