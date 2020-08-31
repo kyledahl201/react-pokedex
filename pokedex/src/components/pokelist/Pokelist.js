@@ -17,6 +17,8 @@ export const Pokelist = ({ pokemons }) => {
                     }
                     return pokemon.name 
                     ? <Pokecard 
+                        key={pokemon.id}
+                        id={pokemon.id}
                         name={pokemon.name}
                         sprite={sprite} />
                     : null  
