@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   handlePokeSearch = (searchValue) => {
-    alert(searchValue)
+    this.setState({ searchField: searchValue });
   }
 
     render () {
