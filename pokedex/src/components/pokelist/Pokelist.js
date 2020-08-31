@@ -4,7 +4,7 @@ import './pokelist.css'
 import { Searchbox } from '../searchbox/Searchbox';
 
 
-export const Pokelist = ({ pokemons, handlePokeSearch }) => {
+export const Pokelist = ({ pokemons, handlePokeSearch, handleClick }) => {
     return (
         <div className="pokelist">
             <Searchbox handlePokeSearch={handlePokeSearch} />
@@ -18,7 +18,8 @@ export const Pokelist = ({ pokemons, handlePokeSearch }) => {
 
                     }
                     return pokemon.name 
-                    ? <Pokecard 
+                    ? <Pokecard
+                        handleClick={handleClick}
                         key={pokemon.id}
                         id={pokemon.id}
                         name={pokemon.name}

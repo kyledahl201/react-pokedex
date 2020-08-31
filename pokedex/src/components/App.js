@@ -23,6 +23,10 @@ class App extends Component {
     this.setState({ searchField: searchValue });
   }
 
+  handleClick = (name) => {
+    alert("coming from app");
+  }
+
     render () {
       const { pokemons, searchField } = this.state;
       let searchedPokemons = pokemons.filter(pokemon => {
@@ -35,7 +39,8 @@ class App extends Component {
           <h1>Pokedex</h1>
           <Pokedex 
           handlePokeSearch={this.handlePokeSearch}
-          pokemons={searchedPokemons} />
+          pokemons={searchedPokemons}
+          handleClick={this.handleClick} />
         </div>
       );
     }
