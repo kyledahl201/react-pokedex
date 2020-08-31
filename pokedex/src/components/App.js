@@ -24,7 +24,9 @@ class App extends Component {
   }
 
   handleClick = (name) => {
-    alert("coming from app");
+    const { pokemons } = this.state;
+    let selectedPokemon = pokemons.find(pokemon => pokemon.name == name)
+    this.setState({ selectedPokemon })
   }
 
     render () {
@@ -40,7 +42,8 @@ class App extends Component {
           <Pokedex 
           handlePokeSearch={this.handlePokeSearch}
           pokemons={searchedPokemons}
-          handleClick={this.handleClick} />
+          handleClick={this.handleClick}
+          selectedPokemon={this.state.selectedPokemon} />
         </div>
       );
     }
