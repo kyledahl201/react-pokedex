@@ -1,14 +1,27 @@
 import React from 'react';
-
+import { Pokecard } from '../pokecard/Pokecard'
 import './pokelist.css'
 
+
 export const Pokelist = ({ pokemons }) => {
-    console.log(pokemons[0]);
     return (
         <div className="pokelist">
-            <p>
-                hello
-            </p>
+            {
+                pokemons.map(pokemon => {
+                    let sprite = null;
+                    try {
+                        sprite = JSON.parse(pokemon.sprites);
+                        sprite = sprite.normal;
+                    } catch (error) {
+
+                    }
+                    return pokemon.name 
+                    ? <Pokecard 
+                        name={pokemon.name}
+                        sprite={sprite} />
+                    : null  
+                })
+            }
         </div>
     )
 }
