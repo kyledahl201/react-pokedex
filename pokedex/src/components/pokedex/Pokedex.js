@@ -1,18 +1,14 @@
 import React from "react";
 
 import "./pokedex.css";
+import { Pokelist } from "../pokelist/Pokelist";
 
 export const Pokedex = ({ pokemons }) => {
-  console.log (pokemons[0]);
+ 
   return (
     <div className="pokedex-container">
       <div className="pokelist-container">
-        {
-          pokemons.map (pokemon => {
-          return <p>{pokemon.name}</p>
-          })
-
-        }
+        <Pokelist pokemons={pokemons} />
       </div>
       <div className="pokesearchresult-container"></div>
     </div>
