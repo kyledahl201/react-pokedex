@@ -23,7 +23,7 @@ class App extends Component {
       return (
         <div className="App">
           <h1>Pokedex</h1>
-          <Pokedex />
+          <Pokedex pokemons={this.state.pokemons} />
         </div>
       );
     }
