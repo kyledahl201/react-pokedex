@@ -19,11 +19,17 @@ class App extends Component {
       this.setState ({ pokemons: pokemonData });
   }
 
+  handlePokeSearch = (searchValue) => {
+    alert(searchValue)
+  }
+
     render () {
       return (
         <div className="App">
           <h1>Pokedex</h1>
-          <Pokedex pokemons={this.state.pokemons} />
+          <Pokedex 
+          handlePokeSearch={this.handlePokeSearch}
+          pokemons={this.state.pokemons} />
         </div>
       );
     }
